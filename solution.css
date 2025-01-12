@@ -1,0 +1,22 @@
+The issue stems from using inline styles in conjunction with `position: absolute`. A more robust approach is to define styles within a CSS class. Here's the corrected CSS:
+
+```css
+.container {
+  width: 200px;
+  height: 200px;
+  background-color: lightgray;
+  position: relative;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  box-shadow: 5px 5px 10px #888888;
+}
+```
+
+By removing the inline `style` attribute and defining `box-shadow` within the `.box` class, the shadow will render correctly.
